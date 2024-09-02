@@ -1,0 +1,179 @@
+:root {
+  --bg-dark:     #282828;
+  --bg-light:    rgba(50, 49, 45, 0.5);
+  --bg-lightest: #fbf1c7;
+  --text-light:  #fbf1c7;
+  --text-dark:   #282828;
+  --accent:      #D8A657;
+  --time:        #DDC7A1;
+  --hover:       #C0AC8B;
+}
+
+body {
+  background-image: url("./backgroud.jpg");
+  background-size: contain; /* Changed from cover to contain */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #282828; /* Fallback color */
+  color: #d4be98; /* Gruvbox Material foreground color */
+  font-family: "Roboto", Roboto, Roboto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.search-box {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  width: 80%;
+  max-width: 600px;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--bg-lightest);
+  color: var(--text-dark);
+}
+
+.search-form a {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--accent);
+  color: var(--text-light);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.search-form a:hover {
+  background-color: var(--hover);
+}
+
+.quote-container {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 24px;
+  display: inline-block;
+  animation: vibrate 1s infinite;
+}
+
+.quote-owner {
+  font-size: 18px;
+  margin-top: 10px;
+  display: block;
+}
+
+.time {
+  color: var(--time);
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.age {
+  color: var(--time);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 20px;
+  width: 170px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  display: block;
+}
+
+.card a:hover {
+  background-color: var(--hover);
+  color: var(--text-dark);
+}
+
+.footer {
+  font-size: 12px;
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(-2px, 2px);
+  }
+}
+
